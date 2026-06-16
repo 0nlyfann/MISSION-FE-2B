@@ -19,7 +19,7 @@ function Home({ onAdd }) {
       <Navbar />
       <Hero />
 
-      {/* Wrapper margin agar tidak mepet ke ujung layar */}
+      
       <div className="px-4 md:px-10 my-6">
         <ContinueSection movies={continueMovies} />
       </div>

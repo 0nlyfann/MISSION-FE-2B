@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isGenreOpen, setIsGenreOpen] = useState(false);
+  
+  const [isGenreMobileOpen, setIsGenreMobileOpen] = useState(false);
 
   return (
     <nav className="h-16 bg-[#181A1C] flex items-center justify-between px-4 md:px-10 relative z-50">
@@ -11,7 +13,7 @@ function Navbar() {
       {/* SISI KIRI: Logo + Navigasi Menu + Dropdown Genre */}
       <div className="flex gap-4 md:gap-10 items-center">
         {/* Logo CHILL */}
-        <Link to="/" className="flex items-center gap-2 md:gap-3 cursor-pointer">
+        <Link to="/Home" className="flex items-center gap-2 md:gap-3 cursor-pointer">
           <img 
             src="/assets/movie-open.png" 
             alt="Logo Icon" 
@@ -42,9 +44,9 @@ function Navbar() {
               />
             </button>
 
-            {/* Isi Dropdown Genre */}
+            {/* Isi Dropdown Genre Desktop */}
             {isGenreOpen && (
-              <div className="absolute left-0 mt-3 w-40 bg-[#121821] border border-gray-800 rounded-lg shadow-2xl py-2 overflow-hidden">
+              <div className="absolute left-0 mt-3 w-40 bg-[#121821] border border-gray-800 rounded-lg shadow-2xl py-2 overflow-hidden z-50">
                 {["Aksi", "Drama", "Anime", "Komedi", "Horor"].map((genre) => (
                   <a key={genre} href="#" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-800 transition">
                     {genre}
@@ -55,16 +57,36 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Menu Navigasi Mobile (HP) */}
+        {/* Menu Navigasi Mobile (HP)  */}
         <div className="flex md:hidden gap-4 text-sm items-center">
           <a href="#" className="text-gray-300 font-medium">Series</a>
           <Link to="/daftar-saya" className="text-gray-300 font-medium">Daftar Saya</Link>
           
-          {/* Dropdown Genre Mobile */}
-          <button onClick={() => setIsGenreOpen(!isGenreOpen)} className="flex items-center gap-1 text-gray-300 font-medium">
-            Genre
-            <img src="/assets/Vector.png" className={`w-2 h-1.5 ${isGenreOpen ? "rotate-180" : ""}`} alt="Arrow" />
-          </button>
+          {/* PERBAIKAN: Bungkus tombol Genre Mobile dalam div relative */}
+          <div className="relative">
+            <button 
+              onClick={() => setIsGenreMobileOpen(!isGenreMobileOpen)} // Gunakan state terpisah
+              className="flex items-center gap-1 text-gray-300 font-medium"
+            >
+              Genre
+              <img 
+                src="/assets/Vector.png" 
+                alt="Arrow" 
+                className={`w-2 h-1.5 transition-transform duration-200 ${isGenreMobileOpen ? "rotate-180" : ""}`} 
+              />
+            </button>
+
+            {/* Isi Dropdown Genre Mobile */}
+            {isGenreMobileOpen && (
+              <div className="absolute left-0 mt-3 w-40 bg-[#121821] border border-gray-800 rounded-lg shadow-2xl py-2 overflow-hidden z-50">
+                {["Aksi", "Drama", "Anime", "Komedi", "Horor"].map((genre) => (
+                  <a key={genre} href="#" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-800 transition">
+                    {genre}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -86,8 +108,9 @@ function Navbar() {
           </span>
         </button>
 
+        {/* Isi Dropdown Profil */}
         {isOpen && (
-          <div className="absolute right-0 mt-3 w-44 bg-[#121821] border border-gray-800 rounded-lg shadow-2xl py-2 overflow-hidden">
+          <div className="absolute right-0 mt-3 w-44 bg-[#121821] border border-gray-800 rounded-lg shadow-2xl py-2 overflow-hidden z-50">
             <Link 
               to="/profile" 
               onClick={() => setIsOpen(false)} 

@@ -44,12 +44,14 @@ function Login() {
             label="Username"
             type="text"
             placeholder="Masukkan username"
+            required
           />
 
           <Input
             label="Kata Sandi"
             type="password"
             placeholder="Masukkan kata sandi"
+            required
           />
 
           <div className="flex justify-between text-xs md:text-sm text-gray-400 mb-6">
