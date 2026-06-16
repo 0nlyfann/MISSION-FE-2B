@@ -36,7 +36,7 @@ function Navbar() {
             >
               Genre
               <img 
-                src="/public/assets/Vector.png" 
+                src="/assets/Vector.png" 
                 alt="Arrow" 
                 className={`w-3 h-2 transition-transform duration-200 ${isGenreOpen ? "rotate-180" : ""}`}
               />
@@ -63,7 +63,7 @@ function Navbar() {
           {/* Dropdown Genre Mobile */}
           <button onClick={() => setIsGenreOpen(!isGenreOpen)} className="flex items-center gap-1 text-gray-300 font-medium">
             Genre
-            <img src="/public/assets/Vector.png" className={`w-2 h-1.5 ${isGenreOpen ? "rotate-180" : ""}`} />
+            <img src="/assets/Vector.png" className={`w-2 h-1.5 ${isGenreOpen ? "rotate-180" : ""}`} alt="Arrow" />
           </button>
         </div>
       </div>
@@ -82,7 +82,7 @@ function Navbar() {
             />
           </div>
           <span className={`text-white text-[10px] md:text-xs transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
-            <img src="/public/assets/Vector.png" alt="" />
+            <img src="/assets/Vector.png" alt="" />
           </span>
         </button>
 
@@ -93,7 +93,7 @@ function Navbar() {
               onClick={() => setIsOpen(false)} 
               className="flex items-center gap-3 px-4 py-2.5 text-sm text-blue-400 hover:bg-gray-800/50 transition font-medium"
             >
-              <span><img src="/public/assets/account.png" alt="" /></span> Profil Saya
+              <span><img src="/assets/account.png" alt="" /></span> Profil Saya
             </Link>
             <a href="#" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-800/50 transition font-medium">
               <span><img src="/assets/bintang.png" alt="" /></span> Ubah Premium
