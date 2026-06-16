@@ -56,7 +56,7 @@ function Register() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition focus:outline-none flex items-center justify-center"
               >
-                <img src={showPassword ? '/assets/eye.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
+                <img src={showPassword ? '/assets/eye-off.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
               </button>
             </div>
           </div>
@@ -75,7 +75,7 @@ function Register() {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition focus:outline-none flex items-center justify-center"
               >
-                <img src={showConfirmPassword ? '/assets/eye.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
+                <img src={showConfirmPassword ? '/assets/eye-off.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
               </button>
             </div>
           </div>
