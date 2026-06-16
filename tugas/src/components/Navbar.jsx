@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="h-16 bg-[#181A1C] flex items-center justify-between px-4 md:px-10 relative z-50">
       
-      {/* SISI KIRI: Logo + Navigasi Menu + Dropdown Genre */}
+      {/* Logo + Navigasi Menu + Dropdown Genre */}
       <div className="flex gap-4 md:gap-10 items-center">
         {/* Logo CHILL */}
         <Link to="/Home" className="flex items-center gap-2 md:gap-3 cursor-pointer">
@@ -62,10 +62,10 @@ function Navbar() {
           <a href="#" className="text-gray-300 font-medium">Series</a>
           <Link to="/daftar-saya" className="text-gray-300 font-medium">Daftar Saya</Link>
           
-          {/* PERBAIKAN: Bungkus tombol Genre Mobile dalam div relative */}
+          
           <div className="relative">
             <button 
-              onClick={() => setIsGenreMobileOpen(!isGenreMobileOpen)} // Gunakan state terpisah
+              onClick={() => setIsGenreMobileOpen(!isGenreMobileOpen)} 
               className="flex items-center gap-1 text-gray-300 font-medium"
             >
               Genre
@@ -90,7 +90,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* SISI KANAN: Dropdown Profil Interaktif */}
+      {/*  Dropdown Profil Interaktif */}
       <div className="relative">
         <button 
           onClick={() => setIsOpen(!isOpen)} 
