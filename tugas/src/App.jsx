@@ -24,10 +24,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Home onAdd={addToMyList} />} />            
+      
+      <Route path="/" element={<Login />} />            
+      
+      
+      <Route path="/home" element={<Home onAdd={addToMyList} />} />            
+      
       <Route path="/daftar-saya" element={<MyListPage myList={myList} onRemove={deleteFromMyList} />} />            
-      <Route path="/profile" element={<Profile myList={myList} onRemove={deleteFromMyList} />} />                        
+      <Route path="/profile" element={<Profile myList={myList} onRemove={deleteFromMyList} />} />            
       <Route path="/register" element={<Register />} />
     </Routes>
   );
