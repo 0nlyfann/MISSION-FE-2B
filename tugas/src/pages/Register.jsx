@@ -17,9 +17,10 @@ function Register() {
       <div className="relative z-10 w-full max-w-md my-auto">
         <AuthCard>
           
+          {/* Logo CHILL */}
           <div className="flex items-center justify-center gap-2 mb-2">
             <h1 className="text-3xl md:text-4xl font-bold text-center text-white tracking-wider flex items-center gap-2">
-              <img src="/public/assets/movie-open.png" alt="" className="w-8 h-8 object-contain" />CHILL
+              <img src="/assets/movie-open.png" alt="Logo" className="w-8 h-8 object-contain" />CHILL
             </h1>
           </div>
 
@@ -31,6 +32,7 @@ function Register() {
             Selamat datang!
           </p>
 
+          {/* Input Username */}
           <div className="mb-4">
             <label className="block text-gray-300 text-sm mb-1.5 font-medium">Username</label>
             <input 
@@ -40,6 +42,7 @@ function Register() {
             />
           </div>
 
+          {/* Input Kata Sandi */}
           <div className="mb-4">
             <label className="block text-gray-300 text-sm mb-1.5 font-medium">Kata Sandi</label>
             <div className="relative">
@@ -53,11 +56,12 @@ function Register() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition focus:outline-none flex items-center justify-center"
               >
-                <img src={showPassword ? '/public/assets/eye.png' : '/public/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
+                <img src={showPassword ? '/assets/eye.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
               </button>
             </div>
           </div>
 
+          {/* Input Konfirmasi Kata Sandi */}
           <div className="mb-4">
             <label className="block text-gray-300 text-sm mb-1.5 font-medium">Konfirmasi Kata Sandi</label>
             <div className="relative">
@@ -71,15 +75,15 @@ function Register() {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition focus:outline-none flex items-center justify-center"
               >
-                <img src={showConfirmPassword ? '/public/assets/eye.png' : '/public/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
+                <img src={showConfirmPassword ? '/assets/eye.png' : '/assets/eye-off.png'} alt="toggle-eye" className="w-5 h-5 object-contain" />
               </button>
             </div>
           </div>
 
-          
+          {/* Tautan Kembali ke Login Utama */}
           <p className="text-xs md:text-sm text-gray-400 mb-5 md:mb-6">
             Sudah punya akun?{" "}
-            <Link to="/login" className="text-white font-medium hover:underline">
+            <Link to="/" className="text-white font-medium hover:underline">
               Masuk
             </Link>
           </p>
@@ -94,9 +98,10 @@ function Register() {
             <div className="flex-1 border-t border-gray-800"></div>
           </div>
 
+          {/* Tombol Google */}
           <button className="w-full border border-gray-700 hover:bg-gray-800/40 text-white py-3 rounded-full flex items-center justify-center gap-3 text-sm font-medium transition">
             <img 
-              src="/public/assets/Google.png" 
+              src="/assets/Google.png" 
               alt="Google Icon" 
               className="w-5 h-5 object-contain"
             />

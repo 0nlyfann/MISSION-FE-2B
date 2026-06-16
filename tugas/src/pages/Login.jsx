@@ -1,4 +1,3 @@
-
 import { Link, useNavigate } from "react-router-dom";
 import AuthCard from "../components/AuthCard";
 import Input from "../components/Input";
@@ -8,10 +7,10 @@ function Login() {
   
   const navigate = useNavigate();
 
-  
   const handleLogin = (e) => {
     e.preventDefault(); 
-    navigate("/");
+    // Mengarahkan ke halaman beranda film Chill setelah klik masuk
+    navigate("/home");
   };
 
   return (
@@ -21,11 +20,11 @@ function Login() {
       <div className="w-full max-w-md my-auto">
         <AuthCard>
 
-          
+          {/* Logo CHILL */}
           <div className="flex items-center justify-center gap-2 mb-2">
             <h1 className="text-3xl md:text-4xl font-bold text-center text-white tracking-wider flex items-center gap-2">
               <img 
-                src="/public/assets/movie-open.png" 
+                src="/assets/movie-open.png" 
                 alt="Logo" 
                 className="w-8 h-8 object-contain" 
               />
@@ -63,7 +62,7 @@ function Login() {
             <span className="cursor-pointer hover:text-white transition">Lupa kata sandi?</span>
           </div>
 
-          
+          {/* Tombol Masuk */}
           <Button text="Masuk" onClick={handleLogin} />
           
           <div className="flex items-center my-4 text-xs text-gray-500">
@@ -72,9 +71,10 @@ function Login() {
             <div className="flex-1 border-t border-gray-800"></div>
           </div>
 
+          {/* Tombol Google */}
           <button className="w-full border border-gray-700 hover:bg-gray-800/40 text-white py-3 rounded-full flex items-center justify-center gap-3 text-sm font-medium transition">
             <img 
-              src="/public/assets/Google.png" 
+              src="/assets/Google.png" 
               alt="Google Icon" 
               className="w-5 h-5 object-contain"
             />
