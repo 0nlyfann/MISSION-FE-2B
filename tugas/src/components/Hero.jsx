@@ -37,7 +37,7 @@ function Hero() {
 
   // Fungsi ketika kursor mouse KELUAR area Hero
   const handleMouseLeave = () => {
-    // Jika sebelum 2 detik mouse sudah keluar, batalkan ancang-ancang putar videonya
+    
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
@@ -101,7 +101,7 @@ function Hero() {
 
           <button className="border border-gray-500 p-2 md:p-3 rounded-full flex items-center justify-center hover:bg-white/10 transition">
             <img 
-              src="/public/assets/volume.png" 
+              src="/assets/volume.png" 
               alt="Volume Icon" 
               className="w-5 h-5 md:w-6 md:h-6 object-contain"
             />

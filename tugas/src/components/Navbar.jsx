@@ -96,11 +96,11 @@ function Navbar() {
               <span><img src="/public/assets/account.png" alt="" /></span> Profil Saya
             </Link>
             <a href="#" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-800/50 transition font-medium">
-              <span><img src="/public/assets/bintang.png" alt="" /></span> Ubah Premium
+              <span><img src="/assets/bintang.png" alt="" /></span> Ubah Premium
             </a>
             <hr className="border-gray-800 my-1" />
             <a href="#" className="flex items-center gap-3 px-4 py-2.5 text-sm text-red-400 hover:bg-gray-800/50 transition font-medium">
-              <span><img src="/public/assets/logout.png" alt="" /></span> Keluar
+              <span><img src="/assets/logout.png" alt="" /></span> Keluar
             </a>
           </div>
         )}
